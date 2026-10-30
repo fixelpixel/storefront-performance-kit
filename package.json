@@ -1,0 +1,26 @@
+{
+  "name": "storefront-performance-kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Reusable toolkit for Shopify speed-optimization engagements: one-click store access + audit + reversible theme edits.",
+  "bin": {
+    "speedkit": "./src/cli.mjs"
+  },
+  "scripts": {
+    "auth": "node src/app.mjs",
+    "kit": "node src/cli.mjs",
+    "test": "node test/selftest.mjs && node test/render-test.mjs && node test/project-test.mjs && node test/kb-test.mjs && node test/fleet-test.mjs && node test/report-test.mjs && node test/verify-test.mjs"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "chrome-launcher": "^1.2.1",
+    "lighthouse": "^12.8.2"
+  },
+  "license": "Apache-2.0"
+}
